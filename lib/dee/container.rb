@@ -5,8 +5,8 @@ module Dee
         @block = block
       end
 
-      def call(*args)
-        @block.call(*args)
+      def create
+        @block.call
       end
     end
 
@@ -16,7 +16,7 @@ module Dee
         @value = nil
       end
 
-      def call
+      def create
         @value = @block.call unless @value
         @value
       end
@@ -40,14 +40,8 @@ module Dee
       value = @values[key]
 
       if value.kind_of? Factory
-        value.call
+        value.create
       end
-    end
-
-    def create(key, args)
-      raise "'%s' is not defined in container" unless @values.key? key
-
-      @values[key].call(*args)
     end
   end
 end

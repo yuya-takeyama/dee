@@ -1,6 +1,6 @@
 # Dee
 
-TODO: Write a gem description
+Simple DI Container/Service Locater for Ruby/Rails
 
 ## Installation
 

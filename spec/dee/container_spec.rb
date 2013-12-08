@@ -23,4 +23,26 @@ describe Dee::Container do
       expect(container['hash']).to equal(a)
     end
   end
+
+  describe '#factory' do
+    context 'without argument' do
+      before do
+        container.factory 'hash' do
+          Hash.new
+        end
+      end
+
+      it 'creates object defined in factory' do
+        expect(container['hash']).to eq(Hash.new)
+      end
+
+      it 'always create new object' do
+        a = container['hash']
+        b = container['hash']
+
+        expect(b).to eq(Hash.new)
+        expect(b).to_not equal(a)
+      end
+    end
+  end
 end

@@ -1,6 +1,13 @@
 module Dee
   class Container
     class Factory
+      def initialize(&block)
+        @block = block
+      end
+
+      def call(*args)
+        @block.call(*args)
+      end
     end
 
     class SingletonFactory < Factory
@@ -17,6 +24,10 @@ module Dee
 
     def initialize
       @values = Hash.new
+    end
+
+    def factory(key, &block)
+      @values[key] = Factory.new(&block)
     end
 
     def singleton(key, &block)

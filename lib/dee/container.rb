@@ -41,7 +41,13 @@ module Dee
 
       if value.kind_of? Factory
         value.create
+      else
+        value
       end
+    end
+
+    def []=(key, value)
+      @values[key] = value
     end
   end
 end

@@ -7,6 +7,13 @@ describe Dee::Container do
     end
   end
 
+  describe '#[]=' do
+    it 'sets value in container' do
+      container['key'] = 'value'
+      expect(container['key']).to eq('value')
+    end
+  end
+
   describe '#singleton' do
     before do
       container.singleton 'hash' do

@@ -43,5 +43,11 @@ module Dee
         value.call
       end
     end
+
+    def create(key, args)
+      raise "'%s' is not defined in container" unless @values.key? key
+
+      @values[key].call(*args)
+    end
   end
 end

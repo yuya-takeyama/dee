@@ -44,5 +44,29 @@ describe Dee::Container do
         expect(b).to_not equal(a)
       end
     end
+
+    context 'with an argument' do
+      before do
+        container.factory 'hash' do |value|
+          {key: value}
+        end
+      end
+
+      it 'creates object defined in factroy' do
+        expect(container.create('hash', ['foo'])).to eq({key: 'foo'})
+      end
+    end
+
+    context 'with multiple arguments' do
+      before do
+        container.factory 'hash' do |value1, value2|
+          {key1: value1, key2: value2}
+        end
+      end
+
+      it 'creates object defined in factroy' do
+        expect(container.create('hash', ['foo', 'bar'])).to eq({key1: 'foo', key2: 'bar'})
+      end
+    end
   end
 end

@@ -1,6 +1,6 @@
 # Dee
 
-Simple DI Container/Service Locater for Ruby/Rails
+Simple DI Container/Service Locater for Ruby
 
 ## Installation
 

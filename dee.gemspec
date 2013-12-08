@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Dee::VERSION
   spec.authors       = ["Yuya Takeyama"]
   spec.email         = ["sign.of.the.wolf.pentagram@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Simple DI Container/Service Locater for Ruby/Rails}
+  spec.summary       = %q{Simple DI Container/Service Locater for Ruby/Rails}
+  spec.homepage      = "https://github.com/yuya-takeyama/dee"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

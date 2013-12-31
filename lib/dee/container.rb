@@ -35,7 +35,7 @@ module Dee
     end
 
     def [](key)
-      raise "'%s' is not defined in container" unless @values.key? key
+      raise "'%s' is not defined in container" % key unless @values.key? key
 
       value = @values[key]
 

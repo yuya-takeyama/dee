@@ -18,7 +18,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+container = Dee::Container.new
+
+# Define a value
+container['foo.name'] = 'FOO'
+
+# Define a factory
+container.factory do 'foo'
+  Foo.new(self['foo.name'])
+end
+
+# Define a singleton factory
+container.singleton do 'foo.singleton' do
+  Foo.new(self['foo.name'])
+end
+
+# Create Foo object
+# This creates Foo object everytime
+foo = container['foo']
+
+# Create singleton Foo object
+# This creates Foo object only at the first time
+# And it returns same object after the creation
+foo = container['foo.singleton']
+```
 
 ## Contributing
 

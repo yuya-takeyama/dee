@@ -3,7 +3,7 @@ describe Dee::Container do
 
   describe '#[]' do
     it 'raises error when no defined key is specified' do
-      expect { container['no_defined_key'] }.to raise_error
+      expect { container['no_defined_key'] }.to raise_error "'no_defined_key' is not defined in container"
     end
   end
 

@@ -1,5 +1,7 @@
 # Dee
 
+[![Build Status](https://travis-ci.org/yuya-takeyama/dee.png?branch=develop)](https://travis-ci.org/yuya-takeyama/dee)
+
 Simple DI Container/Service Locater for Ruby
 
 ## Installation

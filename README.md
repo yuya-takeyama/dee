@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/yuya-takeyama/dee.png?branch=develop)](https://travis-ci.org/yuya-takeyama/dee)
 [![Coverage Status](https://coveralls.io/repos/yuya-takeyama/dee/badge.png?branch=develop)](https://coveralls.io/r/yuya-takeyama/dee?branch=develop)
+[![Analytics](https://ga-beacon.appspot.com/UA-12392004-6/yuya-takeyama/dee)](https://github.com/igrigorik/ga-beacon)
 
 Simple DI Container/Service Locater for Ruby
 

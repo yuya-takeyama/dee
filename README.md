@@ -23,19 +23,21 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+Foo = Struct.new(:name)
+
 container = Dee::Container.new
 
 # Define a value
 container['foo.name'] = 'FOO'
 
 # Define a factory
-container.factory do 'foo'
-  Foo.new(self['foo.name'])
+container.factory 'foo' do
+  Foo.new(container['foo.name'])
 end
 
 # Define a singleton factory
-container.singleton do 'foo.singleton' do
-  Foo.new(self['foo.name'])
+container.singleton 'foo.singleton' do
+  Foo.new(container['foo.name'])
 end
 
 # Create Foo object
